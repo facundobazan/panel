@@ -1,3 +1,4 @@
+import { Area } from './area.enum';
 import { PhoneModel } from './phone.model';
 
 export interface StaffModel {
@@ -5,5 +6,5 @@ export interface StaffModel {
   firstName: string;
   lastName: string;
   phones: PhoneModel[];
-  MainPhoneId: number;
+  area: Area;
 }

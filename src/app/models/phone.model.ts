@@ -1,7 +1,7 @@
-import { TypePhoneModel } from "./type-phone.model";
+import { TypePhone } from "./type-phone.enum";
 
 export interface PhoneModel{
     id?: number;
-    number: number;
-    typePhone: TypePhoneModel
+    phoneNumber: string;
+    typePhone: TypePhone
 }

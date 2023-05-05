@@ -1,1 +1,37 @@
-<p>staff works!</p>
+<div>
+    <form (ngSubmit)="save()" [formGroup]="staffForm">
+
+        <div>
+            <label for="firstName">Nombre</label>
+            <input type="text" name="firstName" formControlName="firstName" #firstName>
+        </div>
+
+        <div>
+            <label for="lastName">Apellido</label>
+            <input type="text" name="lastName" formControlName="lastName" #lastName>
+        </div>
+
+        <div>
+            <label for="phone">Telefono</label>
+            <input type="text" name="phone" formControlName="phone" #phone>
+        </div>
+
+        <div>
+            <label for="typePhone">Tipo</label>
+            <select name="typePhone" formControlName="typePhone" #typePhone>
+                <option *ngFor="let opt of typePhoneValues|keyvalue" [ngValue]="opt.value">{{opt.value}}</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="area">Tipo</label>
+            <select name="area" formControlName="area" #area>
+                <option *ngFor="let opt of areaValues|keyvalue" [ngValue]="opt.value">{{opt.value}}</option>
+            </select>
+        </div>
+
+        <div>
+            <button>Guardar</button>
+        </div>
+    </form>
+</div>
